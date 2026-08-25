@@ -226,24 +226,41 @@
             </a>
 
             <ul class="nav-links" id="desktop-nav">
-                <li><a href="/" id="nav-home" class="{{ request()->is('/') ? 'active' : '' }}">Beranda</a></li>
-                <li><a href="/browse-kampus" id="nav-kampus"
-                        class="{{ request()->is('browse-kampus') ? 'active' : '' }}">Kampus</a></li>
-                <li><a href="/browse-kating" id="nav-kating"
-                        class="{{ request()->is('browse-kating') ? 'active' : '' }}">Kating</a></li>
-                <li><a href="/permintaan-saya" id="nav-permintaan"
-                        class="{{ request()->is('permintaan-saya') ? 'active' : '' }}">Permintaan</a></li>
-                <li><a href="/chat" id="nav-chat" class="{{ request()->is('chat') ? 'active' : '' }}">Chat</a></li>
-                <li><a href="/admin-help" id="nav-help"
-                        class="{{ request()->is('admin-help') ? 'active' : '' }}">Bantuan</a></li>
+                @if(request()->is('kating*'))
+                    <li><a href="/kating/dashboard" id="nav-kating-dash" class="{{ request()->is('kating/dashboard') ? 'active' : '' }}">Dashboard</a></li>
+                    <li><a href="/kating/permintaan" id="nav-kating-permintaan" class="{{ request()->is('kating/permintaan') ? 'active' : '' }}">Permintaan</a></li>
+                    <li><a href="/kating/aktif" id="nav-kating-aktif" class="{{ request()->is('kating/aktif') ? 'active' : '' }}">Job Aktif</a></li>
+                    <li><a href="/kating/riwayat" id="nav-kating-riwayat" class="{{ request()->is('kating/riwayat') ? 'active' : '' }}">Riwayat & Komisi</a></li>
+                    <li><a href="/chat" id="nav-kating-chat" class="{{ request()->is('chat') ? 'active' : '' }}">Chat</a></li>
+                    <li><a href="/kating/profil" id="nav-kating-profil" class="{{ request()->is('kating/profil') ? 'active' : '' }}">Profil Saya</a></li>
+                @elseif(request()->is('admin*'))
+                    <li><a href="/admin/dashboard" id="nav-admin-dash" class="{{ request()->is('admin/dashboard') ? 'active' : '' }}">Dashboard</a></li>
+                    <li><a href="/admin/approval" id="nav-admin-approval" class="{{ request()->is('admin/approval') ? 'active' : '' }}">Approval Kating</a></li>
+                    <li><a href="/admin/antrian" id="nav-admin-antrian" class="{{ request()->is('admin/antrian') ? 'active' : '' }}">Antrian Job</a></li>
+                    <li><a href="/admin/moderasi" id="nav-admin-moderasi" class="{{ request()->is('admin/moderasi') ? 'active' : '' }}">Moderasi Laporan</a></li>
+                    <li><a href="/admin/support" id="nav-admin-support" class="{{ request()->is('admin/support') ? 'active' : '' }}">Support Ticket</a></li>
+                    <li><a href="/admin/log-chat" id="nav-admin-log" class="{{ request()->is('admin/log-chat') ? 'active' : '' }}">Log Chat</a></li>
+                @else
+                    <li><a href="/" id="nav-home" class="{{ request()->is('/') ? 'active' : '' }}">Beranda</a></li>
+                    <li><a href="/browse-kampus" id="nav-kampus" class="{{ request()->is('browse-kampus') ? 'active' : '' }}">Kampus</a></li>
+                    <li><a href="/browse-kating" id="nav-kating" class="{{ request()->is('browse-kating') ? 'active' : '' }}">Kating</a></li>
+                    <li><a href="/permintaan-saya" id="nav-permintaan" class="{{ request()->is('permintaan-saya') ? 'active' : '' }}">Permintaan</a></li>
+                    <li><a href="/chat" id="nav-chat" class="{{ request()->is('chat') ? 'active' : '' }}">Chat</a></li>
+                    <li><a href="/admin-help" id="nav-help" class="{{ request()->is('admin-help') ? 'active' : '' }}">Bantuan</a></li>
+                @endif
             </ul>
 
             <div class="role-switcher">
-                <span class="role-badge" id="current-role-badge">Klien</span>
+                <span class="role-badge" id="current-role-badge">
+                    @if(request()->is('kating*')) Kating
+                    @elseif(request()->is('admin*')) Admin
+                    @else Klien
+                    @endif
+                </span>
                 <select class="role-select" id="role-switcher-select" onchange="switchRole(this.value)">
-                    <option value="klien" selected>👤 Klien</option>
-                    <option value="kating">🎓 Kating</option>
-                    <option value="admin">🛡 Admin</option>
+                    <option value="klien" {{ !request()->is('kating*') && !request()->is('admin*') ? 'selected' : '' }}>👤 Klien</option>
+                    <option value="kating" {{ request()->is('kating*') ? 'selected' : '' }}>🎓 Kating</option>
+                    <option value="admin" {{ request()->is('admin*') ? 'selected' : '' }}>🛡 Admin</option>
                 </select>
             </div>
 
@@ -258,14 +275,28 @@
 
         <div class="mobile-menu" id="mobile-menu">
             <ul>
-                <li><a href="/" id="mob-nav-home">Beranda</a></li>
-                <li><a href="/browse-kampus" id="mob-nav-kampus">Kampus</a></li>
-                <li><a href="/browse-kating" id="mob-nav-kating">Kating</a></li>
-                <li><a href="/permintaan-saya" id="mob-nav-permintaan">Permintaan Saya</a></li>
-                <li><a href="/chat" id="mob-nav-chat">Chat Kating</a></li>
-                <li><a href="/admin-help" id="mob-nav-help">Admin Help</a></li>
-                <li><a href="/kating/dashboard" id="mob-nav-kating-dash">Dashboard Kating</a></li>
-                <li><a href="/admin/dashboard" id="mob-nav-admin-dash">Dashboard Admin</a></li>
+                @if(request()->is('kating*'))
+                    <li><a href="/kating/dashboard">Dashboard Kating</a></li>
+                    <li><a href="/kating/permintaan">Permintaan Masuk</a></li>
+                    <li><a href="/kating/aktif">Job Aktif</a></li>
+                    <li><a href="/kating/riwayat">Riwayat & Komisi</a></li>
+                    <li><a href="/chat">Chat</a></li>
+                    <li><a href="/kating/profil">Profil Saya</a></li>
+                @elseif(request()->is('admin*'))
+                    <li><a href="/admin/dashboard">Dashboard Admin</a></li>
+                    <li><a href="/admin/approval">Approval Kating</a></li>
+                    <li><a href="/admin/antrian">Antrian Job</a></li>
+                    <li><a href="/admin/moderasi">Moderasi Laporan</a></li>
+                    <li><a href="/admin/support">Support Ticket</a></li>
+                    <li><a href="/admin/log-chat">Log Chat</a></li>
+                @else
+                    <li><a href="/" id="mob-nav-home">Beranda</a></li>
+                    <li><a href="/browse-kampus" id="mob-nav-kampus">Kampus</a></li>
+                    <li><a href="/browse-kating" id="mob-nav-kating">Kating</a></li>
+                    <li><a href="/permintaan-saya" id="mob-nav-permintaan">Permintaan Saya</a></li>
+                    <li><a href="/chat" id="mob-nav-chat">Chat Kating</a></li>
+                    <li><a href="/admin-help" id="mob-nav-help">Admin Help</a></li>
+                @endif
             </ul>
         </div>
     </nav>
@@ -305,16 +336,24 @@
             window.location.href = destinations[role];
         }
 
-        // Restore saved role
-        const savedRole = localStorage.getItem('ur_role') || 'klien';
+        // Determine active role from current URL path
+        const path = window.location.pathname;
+        let activeRole = 'klien';
+        if (path.startsWith('/kating')) {
+            activeRole = 'kating';
+        } else if (path.startsWith('/admin')) {
+            activeRole = 'admin';
+        }
+
+        localStorage.setItem('ur_role', activeRole);
         const sel = document.getElementById('role-switcher-select');
-        if (sel) sel.value = savedRole;
+        if (sel) sel.value = activeRole;
         const badge = document.getElementById('current-role-badge');
         if (badge) {
-            badge.textContent = roleLabels[savedRole];
-            badge.style.color = roleColors[savedRole];
-            badge.style.background = roleColors[savedRole] + '1a';
-            badge.style.borderColor = roleColors[savedRole] + '40';
+            badge.textContent = roleLabels[activeRole];
+            badge.style.color = roleColors[activeRole];
+            badge.style.background = roleColors[activeRole] + '1a';
+            badge.style.borderColor = roleColors[activeRole] + '40';
         }
 
         // ─── Mobile Menu ───

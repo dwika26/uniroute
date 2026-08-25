@@ -7,13 +7,9 @@
 .hero {
     position: relative;
     overflow: hidden;
-    padding: 8rem 0 10rem;
+    padding: 5rem 0 7rem;
     text-align: left;
-    background: 
-        radial-gradient(circle at 60% 30%, rgba(181, 137, 61, 0.18) 0%, transparent 50%),
-        radial-gradient(circle at 10% 70%, rgba(44, 74, 62, 0.15) 0%, transparent 45%),
-        linear-gradient(135deg, rgba(34, 56, 44, 0.68) 0%, rgba(252, 251, 247, 0.2) 60%, rgba(252, 251, 247, 0.95) 100%),
-        url('https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=1600&q=70&fit=crop') center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=1600&q=80&fit=crop') center/cover no-repeat;
     min-height: 560px;
     display: flex;
     align-items: center;
@@ -21,48 +17,52 @@
     margin: 1.5rem auto 0;
     max-width: 1280px;
     width: calc(100% - 2.5rem);
-    box-shadow: 0 10px 40px rgba(44, 74, 62, 0.05);
+    box-shadow: 0 8px 32px rgba(13, 148, 136, 0.08);
     border: 1.5px solid var(--color-ur-border);
 }
 .hero-inner {
     width: 100%;
     position: relative;
     z-index: 1;
-    max-width: 650px;
-    padding: 0 4rem;
-    margin: 0;
+    max-width: 620px;
+    margin-left: 3.5rem;
+    padding: 2.5rem 3rem;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 24px;
+    border: 1.5px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 16px 40px rgba(6, 78, 59, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 .hero-glow-1 {
     width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(181, 137, 61, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(13, 148, 136, 0.15) 0%, transparent 70%);
     top: -150px; left: 60%; transform: none;
 }
 .hero-glow-2 {
     width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(44, 74, 62, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(217, 119, 6, 0.1) 0%, transparent 70%);
     bottom: -100px; right: -50px;
 }
 .hero-eyebrow {
     display: inline-flex; align-items: center; gap: 0.5rem;
     font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-    color: #2c4a3e; border: 1.5px solid rgba(44, 74, 62, 0.15);
-    background: rgba(255, 255, 255, 0.95); padding: 0.45rem 1.1rem; border-radius: 999px;
-    margin-bottom: 1.5rem;
+    color: #065f46; border: 1.5px solid #a7f3d0;
+    background: #ecfdf5; padding: 0.45rem 1.1rem; border-radius: 999px;
+    margin-bottom: 1.25rem;
     animation: fadeSlideDown 0.6s ease both;
 }
 .hero-title {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+    font-size: clamp(2.2rem, 4.5vw, 3.75rem);
     font-weight: 800; letter-spacing: -0.03em; line-height: 1.1;
-    color: #ffffff; margin: 0 0 1.25rem;
-    text-shadow: 0 4px 18px rgba(34, 56, 44, 0.85), 0 2px 4px rgba(34, 56, 44, 0.9);
+    color: #064e3b; margin: 0 0 1.25rem;
     animation: fadeSlideDown 0.6s 0.1s ease both;
 }
-.hero-title .accent { color: #ebf1eb; text-shadow: 0 4px 18px rgba(34, 56, 44, 0.85), 0 2px 4px rgba(34, 56, 44, 0.9); }
+.hero-title .accent { color: #0d9488; }
 .hero-subtitle {
-    font-size: clamp(0.95rem, 2vw, 1.1rem); color: rgba(255, 255, 255, 0.95); max-width: 500px;
-    margin: 0 0 2.5rem; line-height: 1.8;
-    text-shadow: 0 3px 12px rgba(34, 56, 44, 0.85), 0 1px 3px rgba(34, 56, 44, 0.95);
+    font-size: clamp(0.95rem, 1.8vw, 1.05rem); color: #334155; max-width: 500px;
+    margin: 0 0 2rem; line-height: 1.7;
     animation: fadeSlideDown 0.6s 0.2s ease both;
 }
 .hero-actions {
@@ -73,43 +73,43 @@
     display: inline-flex; align-items: center; gap: 0.5rem;
     padding: 0.875rem 2rem; border-radius: var(--radius-btn);
     font-weight: 700; font-size: 0.95rem;
-    background: #2c4a3e; color: #ffffff;
+    background: #0d9488; color: #ffffff;
     border: none; cursor: pointer;
-    transition: all 0.2s; box-shadow: 0 4px 14px rgba(44,74,62,0.2);
+    transition: all 0.2s; box-shadow: 0 4px 14px rgba(13,148,136,0.3);
     text-decoration: none;
 }
-.btn-primary:hover { opacity: 0.95; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4); }
+.btn-primary:hover { background: #0f766e; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(13,148,136,0.4); }
 .btn-secondary {
     display: inline-flex; align-items: center; gap: 0.5rem;
     padding: 0.875rem 2rem; border-radius: var(--radius-btn);
     font-weight: 700; font-size: 0.95rem;
-    background: var(--color-ur-card); color: var(--color-ur-white);
+    background: #ffffff; color: #064e3b;
     border: 1.5px solid var(--color-ur-border); cursor: pointer;
     transition: all 0.2s; backdrop-filter: blur(6px);
     text-decoration: none;
     box-shadow: var(--shadow-card);
 }
-.btn-secondary:hover { background: var(--color-ur-navy-2); border-color: var(--color-ur-gray-2); transform: translateY(-2px); }
+.btn-secondary:hover { background: #ecfdf5; border-color: #a7f3d0; transform: translateY(-2px); }
 
-/* Overrides for buttons inside the dark hero section to look premium */
+/* Overrides for buttons inside hero section */
 .hero .btn-secondary {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1.5px solid rgba(44, 74, 62, 0.15);
-    color: #2c4a3e;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.02);
+    background: #ffffff;
+    border: 1.5px solid #a7f3d0;
+    color: #065f46;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
 }
 .hero .btn-secondary:hover {
-    background: #ffffff;
-    border-color: #2c4a3e;
+    background: #ecfdf5;
+    border-color: #0d9488;
 }
 .hero .btn-primary {
-    background: #2c4a3e;
+    background: #0d9488;
     color: #ffffff;
-    box-shadow: 0 4px 14px rgba(44,74,62,0.25);
+    box-shadow: 0 4px 14px rgba(13,148,136,0.35);
 }
 .hero .btn-primary:hover {
-    background: #1b3a2b;
-    box-shadow: 0 6px 20px rgba(44,74,62,0.35);
+    background: #0f766e;
+    box-shadow: 0 6px 20px rgba(13,148,136,0.45);
 }
 
 /* --- Stats Bar --- */
@@ -335,7 +335,7 @@
             <span class="accent">Tiba di Kampus</span>
         </h1>
         <p class="hero-subtitle" id="hero-subtitle">
-            UniRoute menghubungkan mahasiswa Indonesia dengan <strong style="color:#ffc107; text-shadow: 0 2px 8px rgba(34, 56, 44, 0.95);">Kating</strong> (kakak tingkat) yang sudah lebih dulu berada di negara tujuan &mdash; untuk cek apartemen, bantu pindahan, hingga jemput di bandara.
+            UniRoute menghubungkan mahasiswa Indonesia dengan <strong style="color:#0d9488;">Kating</strong> (kakak tingkat) yang sudah lebih dulu berada di negara tujuan &mdash; untuk cek apartemen, bantu pindahan, hingga jemput di bandara.
         </p>
 
         <div class="hero-actions" id="hero-actions">
@@ -609,12 +609,12 @@
 </section>
 
 <!-- --- CTA BANNER --- -->
-<section style="background: linear-gradient(135deg, #070512 0%, #151030 50%, #0a081a 100%); border: 1.5px solid rgba(99,102,241,0.18); border-radius: 24px; padding: 4rem 2rem; text-align: center; margin-bottom: 2rem; position: relative; overflow: hidden; box-shadow: var(--shadow-card);" id="cta-banner">
-    <div class="glow-spot" style="width: 350px; height: 350px; background: radial-gradient(circle, rgba(99,102,241,0.2) 0%, transparent 70%); top: -100px; left: 50%; transform: translateX(-50%); position: absolute;"></div>
+<section style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #e0f2fe 100%); border: 1.5px solid #a7f3d0; border-radius: 24px; padding: 4rem 2rem; text-align: center; margin-bottom: 2rem; position: relative; overflow: hidden; box-shadow: var(--shadow-card);" id="cta-banner">
+    <div class="glow-spot" style="width: 350px; height: 350px; background: radial-gradient(circle, rgba(13,148,136,0.15) 0%, transparent 70%); top: -100px; left: 50%; transform: translateX(-50%); position: absolute;"></div>
     <div style="position: relative; z-index: 1;">
-        <h2 style="font-size: clamp(1.5rem, 4vw, 2.5rem); font-family: 'Space Grotesk', sans-serif; font-weight: 800; color: #ffffff; margin: 0 0 0.75rem;">Butuh Admin Help?</h2>
-        <p style="color: rgba(255,255,255,0.7); margin: 0 0 2rem; max-width: 480px; margin-left: auto; margin-right: auto; font-size: 0.95rem; line-height: 1.6;">Untuk pertanyaan, komplain, atau masalah yang di luar kapasitas kating — tim internal kami siap membantu.</p>
-        <a href="/admin-help" class="btn-primary" id="btn-admin-help-cta" style="margin: 0 auto; box-shadow: 0 4px 18px rgba(20, 184, 166, 0.4);">
+        <h2 style="font-size: clamp(1.5rem, 4vw, 2.5rem); font-family: 'Space Grotesk', sans-serif; font-weight: 800; color: #064e3b; margin: 0 0 0.75rem;">Butuh Admin Help?</h2>
+        <p style="color: #334155; margin: 0 0 2rem; max-width: 480px; margin-left: auto; margin-right: auto; font-size: 0.95rem; line-height: 1.6;">Untuk pertanyaan, komplain, atau masalah yang di luar kapasitas kating — tim internal kami siap membantu.</p>
+        <a href="/admin-help" class="btn-primary" id="btn-admin-help-cta" style="margin: 0 auto; background: #0d9488; color: #ffffff; box-shadow: 0 4px 18px rgba(13, 148, 136, 0.35);">
             📋 Hubungi Admin
         </a>
     </div>

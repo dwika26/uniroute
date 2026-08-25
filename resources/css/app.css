@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-    --color-ur-navy: #fcfbf7;
-    --color-ur-navy-2: #edf2ed;
+    --color-ur-navy: #f4f8f5;
+    --color-ur-navy-2: #e6f0e9;
     --color-ur-navy-3: #ffffff;
-    --color-ur-navy-4: #d2dfd2;
-    --color-ur-purple: #3a6b5c;
-    --color-ur-mint: #2c4a3e;
-    --color-ur-mint-dark: #1b3a2b;
-    --color-ur-mint-light: #eef5ee;
-    --color-ur-gold: #b5893d;
-    --color-ur-blue: #3e6b52;
-    --color-ur-blue-light: #edf4ed;
-    --color-ur-white: #22382c;
-    --color-ur-gray: #4a5f54;
-    --color-ur-gray-2: #6d8376;
-    --color-ur-border: #dfebd9;
+    --color-ur-navy-4: #cce0d1;
+    --color-ur-purple: #1e3e30;
+    --color-ur-mint: #0d9488;
+    --color-ur-mint-dark: #064e3b;
+    --color-ur-mint-light: #ecfdf5;
+    --color-ur-gold: #d97706;
+    --color-ur-blue: #2563eb;
+    --color-ur-blue-light: #eff6ff;
+    --color-ur-white: #112217;
+    --color-ur-gray: #475569;
+    --color-ur-gray-2: #64748b;
+    --color-ur-border: #dbe7dd;
     --color-ur-card: #ffffff;
 
     --font-family-sans: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
@@ -25,8 +25,8 @@
     --radius-btn: 999px;
     --radius-badge: 999px;
 
-    --shadow-card: 0 8px 30px rgba(44,74,62,0.04), 0 2px 8px rgba(44,74,62,0.02);
-    --shadow-glow: 0 0 32px 0 rgba(44,74,62,0.06);
+    --shadow-card: 0 4px 20px rgba(19, 34, 23, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+    --shadow-glow: 0 0 32px 0 rgba(13, 148, 136, 0.12);
 }
 
 @layer base {
@@ -65,14 +65,14 @@
 
     input:focus, textarea:focus, select:focus {
         border-color: var(--color-ur-mint);
-        box-shadow: 0 0 0 3px rgba(200,245,103,0.12);
+        box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
     }
 
     input::placeholder, textarea::placeholder {
-        color: var(--color-ur-gray);
+        color: var(--color-ur-gray-2);
     }
 
-    select option { background-color: var(--color-ur-navy-3); }
+    select option { background-color: var(--color-ur-navy-3); color: var(--color-ur-white); }
 
     label {
         display: block;
@@ -90,8 +90,8 @@
             -30deg,
             transparent,
             transparent 28px,
-            rgba(100,80,200,0.08) 28px,
-            rgba(100,80,200,0.08) 30px
+            rgba(13, 148, 136, 0.04) 28px,
+            rgba(13, 148, 136, 0.04) 30px
         );
 }
 
@@ -99,7 +99,7 @@
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--color-ur-navy); }
 ::-webkit-scrollbar-thumb { background: var(--color-ur-navy-4); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-ur-purple); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-ur-mint); }
 
 /* ─── Glow Spot ─── */
 .glow-spot {
