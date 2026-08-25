@@ -335,7 +335,7 @@
             <span class="accent">Tiba di Kampus</span>
         </h1>
         <p class="hero-subtitle" id="hero-subtitle">
-            UniRoute menghubungkan mahasiswa Indonesia dengan <strong style="color:#0d9488;">Kating</strong> (kakak tingkat) yang sudah lebih dulu berada di negara tujuan &mdash; untuk cek apartemen, bantu pindahan, hingga jemput di bandara.
+            UniRoute merupakan platform digital terintegrasi yang mendampingi mahasiswa Indonesia dari penerimaan LoA hingga hari keberangkatan.
         </p>
 
         <div class="hero-actions" id="hero-actions">
