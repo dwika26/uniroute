@@ -1,66 +1,50 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# UniRoute — Dari Penerimaan Hingga Keberangkatan
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Platform pendamping mahasiswa Indonesia dari fase penerimaan (LoA) hingga menetap di negara tujuan, melalui pendampingan langsung oleh **Kating** (mahasiswa Indonesia yang sudah berada di negara/kota tujuan).
 
-## About Laravel
+## 🚀 Layanan Utama UniRoute
+1. **Apartment Check** — Verifikasi langsung kondisi fisik listing apartemen sebelum klien membayar sewa jarak jauh.
+2. **Move-in Help** — Bantuan saat hari kepindahan (lapor meteran utilitas, angkut koper, orientasi hunian & lingkungan).
+3. **Airport Pickup** — Penjemputan di bandara dan pendampingan perjalanan hingga tiba di akomodasi.
+4. **Chat Kating & Admin Help** — Konsultasi langsung dengan kating dan pusat resolusi bantuan internal.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📂 Struktur Halaman Static (.html)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Semua halaman merupakan file HTML murni yang saling terhubung tanpa membutuhkan backend/server runtime:
 
-## Learning Laravel
+### Role: Klien
+- `index.html` — Landing page utama (Hero, layanan, cari kampus, kating unggulan)
+- `browse-kampus.html` — Pencarian & filter kampus internasional
+- `browse-kating.html` — Daftar profil kating dengan filter kota/negara & layanan
+- `profil-kating.html` — Detail profil kating, portofolio, ulasan & tombol aksi
+- `ajukan-layanan.html` — Form pemesanan 3 jenis layanan (Apartment / Move-in / Pickup)
+- `permintaan-saya.html` — Daftar antrian pesanan aktif & status verifikasi
+- `detail-layanan.html` — Laporan detail hasil inspeksi checklist & foto bukti fisik
+- `chat.html` — Antarmuka obrolan langsung klien & kating
+- `riwayat.html` — Histori komprehensif seluruh pesanan selesai & ulasan
+- `admin-help.html` — Layanan tiket bantuan dan resolusi kendala
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Role: Kating
+- `kating-dashboard.html` — Ringkasan performa, job aktif, dan pendapatan
+- `kating-permintaan.html` — Permintaan order baru masuk yang butuh konfirmasi
+- `kating-aktif.html` — Daftar job yang sedang ditangani saat ini
+- `kating-laporan.html` — Form input laporan hasil verifikasi & konfirmasi multi-layanan
+- `kating-riwayat.html` — Histori pekerjaan selesai dan rincian pencairan komisi
+- `kating-profil.html` — Pengaturan profil, keahlian, dan ketersediaan layanan
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Role: Admin
+- `admin-dashboard.html` — Statistik operasional dan monitoring metrik platform
+- `admin-approval.html` — Verifikasi kelayakan dokumen pendaftar kating baru
+- `admin-antrian.html` — Monitoring antrian job yang belum diambil kating
+- `admin-moderasi.html` — Review & validasi laporan inspeksi sebelum dirilis ke klien
+- `admin-support.html` — Inbox tiket pengaduan klien
+- `admin-log-chat.html` — Log arsip komunikasi untuk audit kepatuhan
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🎨 Asset & Styling
+- **CSS**: Tailwind CSS build di `build/assets/app-749JKdfD.css` dan inline styling tema UniRoute.
+- **Images**: `images/logo.png`.
+- **Favicon**: `favicon.ico`.
