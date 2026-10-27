@@ -62,6 +62,10 @@ Route::prefix('kating')->name('kating.')->group(function () {
         return view('kating.aktif');
     })->name('aktif');
 
+    Route::get('/laporan/{layananId?}', function ($layananId = 'apartment') {
+        return view('kating.laporan', ['layananId' => $layananId]);
+    })->name('laporan');
+
     Route::get('/riwayat', function () {
         return view('kating.riwayat');
     })->name('riwayat');

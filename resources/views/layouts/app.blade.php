@@ -239,6 +239,7 @@
                     <li><a href="/kating/dashboard" id="nav-kating-dash" class="{{ request()->is('kating/dashboard') ? 'active' : '' }}">Dashboard</a></li>
                     <li><a href="/kating/permintaan" id="nav-kating-permintaan" class="{{ request()->is('kating/permintaan') ? 'active' : '' }}">Permintaan</a></li>
                     <li><a href="/kating/aktif" id="nav-kating-aktif" class="{{ request()->is('kating/aktif') ? 'active' : '' }}">Job Aktif</a></li>
+                    <li><a href="/kating/laporan" id="nav-kating-laporan" class="{{ request()->is('kating/laporan*') ? 'active' : '' }}">Form Laporan</a></li>
                     <li><a href="/kating/riwayat" id="nav-kating-riwayat" class="{{ request()->is('kating/riwayat') ? 'active' : '' }}">Riwayat & Komisi</a></li>
                     <li><a href="/chat" id="nav-kating-chat" class="{{ request()->is('chat') ? 'active' : '' }}">Chat</a></li>
                     <li><a href="/kating/profil" id="nav-kating-profil" class="{{ request()->is('kating/profil') ? 'active' : '' }}">Profil Saya</a></li>
@@ -254,6 +255,7 @@
                     <li><a href="/browse-kampus" id="nav-kampus" class="{{ request()->is('browse-kampus') ? 'active' : '' }}">Kampus</a></li>
                     <li><a href="/browse-kating" id="nav-kating" class="{{ request()->is('browse-kating') ? 'active' : '' }}">Kating</a></li>
                     <li><a href="/permintaan-saya" id="nav-permintaan" class="{{ request()->is('permintaan-saya') ? 'active' : '' }}">Permintaan</a></li>
+                    <li><a href="/riwayat" id="nav-riwayat" class="{{ request()->is('riwayat') ? 'active' : '' }}">Riwayat</a></li>
                     <li><a href="/chat" id="nav-chat" class="{{ request()->is('chat') ? 'active' : '' }}">Chat</a></li>
                     <li><a href="/admin-help" id="nav-help" class="{{ request()->is('admin-help') ? 'active' : '' }}">Bantuan</a></li>
                 @endif
@@ -288,6 +290,7 @@
                     <li><a href="/kating/dashboard">Dashboard Kating</a></li>
                     <li><a href="/kating/permintaan">Permintaan Masuk</a></li>
                     <li><a href="/kating/aktif">Job Aktif</a></li>
+                    <li><a href="/kating/laporan">Form Laporan</a></li>
                     <li><a href="/kating/riwayat">Riwayat & Komisi</a></li>
                     <li><a href="/chat">Chat</a></li>
                     <li><a href="/kating/profil">Profil Saya</a></li>
@@ -303,6 +306,7 @@
                     <li><a href="/browse-kampus" id="mob-nav-kampus">Kampus</a></li>
                     <li><a href="/browse-kating" id="mob-nav-kating">Kating</a></li>
                     <li><a href="/permintaan-saya" id="mob-nav-permintaan">Permintaan Saya</a></li>
+                    <li><a href="/riwayat" id="mob-nav-riwayat">Riwayat Layanan</a></li>
                     <li><a href="/chat" id="mob-nav-chat">Chat Kating</a></li>
                     <li><a href="/admin-help" id="mob-nav-help">Admin Help</a></li>
                 @endif
@@ -325,8 +329,8 @@
     <script>
         // ─── Role Switcher ───
         const roleNavLinks = {
-            klien: ['/', '/browse-kampus', '/browse-kating', '/permintaan-saya', '/chat', '/admin-help'],
-            kating: ['/kating/dashboard', '/kating/permintaan', '/kating/aktif', '/kating/riwayat', '/kating/chat'],
+            klien: ['/', '/browse-kampus', '/browse-kating', '/permintaan-saya', '/riwayat', '/chat', '/admin-help'],
+            kating: ['/kating/dashboard', '/kating/permintaan', '/kating/aktif', '/kating/laporan', '/kating/riwayat', '/kating/chat'],
             admin: ['/admin/dashboard', '/admin/approval', '/admin/antrian', '/admin/moderasi', '/admin/support']
         };
         const roleLabels = { klien: 'Klien', kating: 'Kating', admin: 'Admin' };

@@ -10,7 +10,7 @@
             <p class="text-sm text-slate-500">Daftar pekerjaan yang sedang Anda tangani saat ini.</p>
         </div>
         <div>
-            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">2 Job Sedang Berjalan</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">3 Job Sedang Berjalan</span>
         </div>
     </div>
 
@@ -23,8 +23,11 @@
                 <p class="text-xs text-slate-300">Klien: Dimas Anggara • Deadline: Hari ini, 18:00 CET</p>
             </div>
             <div class="flex items-center gap-3">
-                <button onclick="document.getElementById('report-modal').classList.remove('hidden')" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded-xl shadow-lg shadow-emerald-500/20 transition">
-                    📝 Input Laporan Verification
+                <a href="/kating/laporan/apartment" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded-xl shadow-lg shadow-emerald-500/20 transition inline-flex items-center gap-1.5">
+                    📝 Form Laporan Detail
+                </a>
+                <button onclick="document.getElementById('report-modal').classList.remove('hidden')" class="px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs rounded-xl border border-white/20 transition">
+                    Quick Modal
                 </button>
             </div>
         </div>
@@ -60,9 +63,9 @@
                 <p class="text-xs text-slate-300">Klien: Rania Putri • Flight: GA880 (Garuda Indonesia)</p>
             </div>
             <div class="flex items-center gap-3">
-                <button onclick="alert('Konfirmasi penjemputan berhasil dikirim ke Klien!')" class="px-5 py-2.5 bg-blue-500 hover:bg-blue-400 text-white font-bold text-xs rounded-xl shadow-lg transition">
-                    ✈️ Update Status Penjemputan
-                </button>
+                <a href="/kating/laporan/pickup" class="px-5 py-2.5 bg-blue-500 hover:bg-blue-400 text-white font-bold text-xs rounded-xl shadow-lg transition inline-flex items-center gap-1.5">
+                    ✈️ Konfirmasi Penjemputan
+                </a>
             </div>
         </div>
 
@@ -79,6 +82,43 @@
                 <span class="text-slate-400 font-semibold uppercase block mb-1">Status Pengerjaan</span>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-50 text-blue-800 rounded-full font-bold text-xs border border-blue-200">
                     Jadwal Terkonfirmasi
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Active Job Item 3 -->
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+        <div class="bg-gradient-to-r from-amber-900 to-slate-900 p-5 text-white flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+                <span class="px-3 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold rounded-full border border-amber-500/30 uppercase tracking-wider">📦 Move-in Help</span>
+                <h3 class="text-lg font-bold mt-2">Bantuan Orientasi & Pindahan Rotterdamseweg</h3>
+                <p class="text-xs text-slate-300">Klien: Rania Putri • Jadwal: Besok, 10:00 CET</p>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="/kating/laporan/movein" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs rounded-xl shadow-lg transition inline-flex items-center gap-1.5">
+                    📦 Form Konfirmasi Move-in
+                </a>
+            </div>
+        </div>
+
+        <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+            <div>
+                <span class="text-slate-400 font-semibold uppercase block mb-1">Alamat Hunian Klien</span>
+                <p class="font-medium text-slate-800">Rotterdamscheweg 42, 2628 AL Delft, Netherlands</p>
+            </div>
+            <div>
+                <span class="text-slate-400 font-semibold uppercase block mb-1">Rencana Pendampingan</span>
+                <ul class="list-disc list-inside text-slate-700 space-y-1 font-medium">
+                    <li>Pencatatan meteran & serah kunci</li>
+                    <li>Unpacking 2 koper</li>
+                    <li>Orientasi kartu OV-chipkaart & rute trem</li>
+                </ul>
+            </div>
+            <div>
+                <span class="text-slate-400 font-semibold uppercase block mb-1">Status Pengerjaan</span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 text-amber-800 rounded-full font-bold text-xs border border-amber-200">
+                    Menunggu Hari Kedatangan
                 </span>
             </div>
         </div>
